@@ -39,3 +39,25 @@ Before you begin, ensure you have met the following requirements:
 To install the dependencies, run:
 ```bash
 pip install -r requirements.txt
+## Installation Guide
+Clone the Repository
+To download this project to your local machine, run:
+
+bash
+git clone https://github.com/Muhit-1/Task-Manager-app.git
+Open in PyCharm
+Open PyCharm.
+Click File > Open, and select the project folder you just cloned.
+Install dependencies using:
+bash
+Copy code
+pip install -r requirements.txt
+Run the Application
+Navigate to the main file, main.py.
+Run the app using PyCharm's Run button or by executing:
+bash
+python main.py
+### Clone the Repository
+To download this project to your local machine, run:
+```bash
+git clone https://github.com/Muhit-1/Task-Manager-app.git
