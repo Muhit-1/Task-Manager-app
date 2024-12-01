@@ -1,0 +1,99 @@
+<TaskPage>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: [10, 40]
+        spacing: 0
+
+        canvas.before:
+            Color:
+                rgba: 0.12, 0.11, 0.2,0.1  # Updated background color
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        MDLabel:
+            text: "Task Manager"
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0, 1
+            font_style: "H4"
+            bold: True
+            size_hint_y: None
+            height: "60dp"
+
+        ScrollView:
+            size_hint: 0.95, 0.7
+            pos_hint: {"center_x": 0.5}
+            do_scroll_x: False
+            do_scroll_y: True
+
+            MDBoxLayout:
+                id: task_list
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 20
+                padding: [20, 20]
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            size_hint: 0.9, None
+            height: "55dp"
+            pos_hint: {"center_x": 0.5}
+            spacing: 20
+
+            MDRaisedButton:
+                text: "Add Task"
+                md_bg_color: 0.1, 0.7, 0.4, 1  # Green button
+                size_hint_x: 0.45, None
+                radius: [20, 20, 20, 20]
+                on_release: root.show_task_popup()
+
+            MDRaisedButton:
+                text: "Completed Tasks"
+                md_bg_color: 0.2, 0.5, 0.8, 1  # Blue button
+                size_hint_x: 0.45, None
+                radius: [20, 20, 20, 20]
+                on_release: root.show_completed_tasks_popup()
+
+
+<TaskItem>:
+    description: ""
+    task_id: 0
+    orientation: "horizontal"
+    size_hint_y: None
+    height: "100dp"
+    spacing: 20
+    padding: [15, 15]
+    radius: [15, 15, 15, 15]
+    md_bg_color: 0.2, 0.2, 0.3, 1
+
+    MDLabel:
+        text: root.description
+        size_hint_x: 0.7
+        theme_text_color: "Custom"
+        text_color: 1, 1, 1, 1
+        halign: "left"
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.3
+        spacing: 5
+
+        MDRaisedButton:
+            text: "Done"
+            md_bg_color: 0.2, 0.7, 0.3, 1
+            radius: [15, 15, 15, 15]
+            on_release: root.mark_done()
+
+        MDRaisedButton:
+            text: "Edit"
+            md_bg_color: 0.9, 0.6, 0.2, 1
+            radius: [15, 15, 15, 15]
+            on_release: root.edit_task()
+
+        MDRaisedButton:
+            text: "Delete"
+            md_bg_color: 0.8, 0.2, 0.2, 1
+            radius: [15, 15, 15, 15]
+            on_release: root.delete_task()

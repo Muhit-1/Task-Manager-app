@@ -1,0 +1,73 @@
+<RegisterPage>:
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: [50, 150]
+        spacing: 20
+        md_bg_color: 0.9, 0.9, 0.95, 1  # Light grayish blue background
+
+        MDLabel:
+            text: "Create an Account"
+            halign: "center"
+            font_style: "H3"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0, 1  # Black text
+            bold: True
+            size_hint_y: None
+            height: "60dp"
+
+        MDLabel:
+            text: "Register to Get Started"
+            halign: "center"
+            font_style: "Body1"
+            theme_text_color: "Custom"
+            text_color: 0.6, 0.6, 0.6, 1  # Light gray text
+            size_hint_y: None
+            height: "40dp"
+
+        MDTextField:
+            id: username_input
+            hint_text: "Enter your Username"
+            font_size: 16
+            size_hint: 0.8, None
+            height: "50dp"
+            multiline: False
+            mode: "fill"
+            radius: [25, 25, 25, 25]
+            pos_hint: {"center_x": 0.5}
+
+        MDTextField:
+            id: password_input
+            hint_text: "Enter your Password"
+            password: True
+            font_size: 16
+            size_hint: 0.8, None
+            height: "50dp"
+            multiline: False
+            mode: "fill"
+            radius: [25, 25, 25, 25]
+            pos_hint: {"center_x": 0.5}
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            spacing: "25dp"
+            size_hint: 0.8, None
+            height: "50dp"
+            pos_hint: {"center_x": 0.5}
+
+            MDRaisedButton:
+                text: "Register"
+                font_size: 18
+                size_hint_x: 0.5,None
+                md_bg_color: 0.1, 0.7, 0.4, 1  # Green color
+                text_color: 1, 1, 1, 1
+                radius: [25, 25, 25, 25]
+                on_release: root.register()
+
+            MDRaisedButton:
+                text: "Back to Login"
+                font_size: 18
+                size_hint_x: 0.5,None
+                md_bg_color: 0.6, 0.1, 0.1, 1  # Red color
+                text_color: 1, 1, 1, 1
+                radius: [25, 25, 25, 25]
+                on_release: app.root.current = "login"
