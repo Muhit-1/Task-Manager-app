@@ -14,6 +14,7 @@ Builder.load_file("kv file/register_page.kv")
 Builder.load_file("kv file/task_page.kv")
 
 
+
 class MainApp(MDApp):
     def build(self):
         # Initialize the database handler
