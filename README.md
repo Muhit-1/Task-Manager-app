@@ -1,3 +1,7 @@
+Contact
+Muhit Rahman
+Email: [senanovi908@gmail.com]
+GitHub: Muhit-1
 # Task Manager App
 
 A Python-based **Task Manager Application** built using **Kivy** and **KivyMD** for creating, managing, and tracking tasks with notification functionality. This app allows users to register, log in, add, edit, and delete tasks, with completed tasks stored in history.
@@ -19,13 +23,30 @@ A Python-based **Task Manager Application** built using **Kivy** and **KivyMD** 
 ## Technology Stack
 - **Programming Language**: Python
 - **Frameworks**: 
-  - Kivy
-  - KivyMD
+  - [Kivy](https://kivy.org/)
+  - [KivyMD](https://kivymd.readthedocs.io/)
 - **Database**: SQLite
 - **Version Control**: Git & GitHub
 - **Development Environment**: PyCharm
 
 ---
+
+Task-Manager-app/
+├── database/
+│   └── db_handler.py    # Handles SQLite database operations
+├── kv file/
+│   ├── login_page.kv    # Kivy layout for Login Page
+│   ├── register_page.kv # Kivy layout for Register Page
+│   ├── task_page.kv     # Kivy layout for Task Management
+├── pages/
+│   ├── login_page.py    # Logic for Login Page
+│   ├── register_page.py # Logic for Registration Page
+│   ├── task_page.py     # Logic for Task Management Page
+├── main.py              # Main entry point of the application
+├── requirements.txt     # List of dependencies
+├── README.md            # Project documentation
+└── .gitignore           # Files and folders to ignore in Git
+
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
@@ -39,25 +60,6 @@ Before you begin, ensure you have met the following requirements:
 To install the dependencies, run:
 ```bash
 pip install -r requirements.txt
-## Installation Guide
-Clone the Repository
-To download this project to your local machine, run:
 
-bash
-git clone https://github.com/Muhit-1/Task-Manager-app.git
-Open in PyCharm
-Open PyCharm.
-Click File > Open, and select the project folder you just cloned.
-Install dependencies using:
-bash
-Copy code
-pip install -r requirements.txt
-Run the Application
-Navigate to the main file, main.py.
-Run the app using PyCharm's Run button or by executing:
-bash
-python main.py
-### Clone the Repository
-To download this project to your local machine, run:
-```bash
-git clone https://github.com/Muhit-1/Task-Manager-app.git
+
+  
