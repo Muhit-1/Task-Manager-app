@@ -6,7 +6,7 @@ import threading
 class ReminderHandler:
     def __init__(self, db_handler):
         self.db_handler = db_handler
-        self.sound_file = "notification_sound.mp3"  # Path to your sound file
+        self.sound_file = "sounds/notification-sound-3.mp3"  # Path to sound file
 
     def check_reminders(self, *args):
         """Check for due reminders and send notifications."""
